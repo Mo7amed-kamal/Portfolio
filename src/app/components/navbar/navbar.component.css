@@ -1,0 +1,74 @@
+:root{
+    --bg-color:#e3edf7;
+    --gradient-white-bg:linear-gradient(0deg,#fff 0%,#edf4fa 51%,#e5eef7 100%);
+    --gradient-color-bg:linear-gradient(180deg,rgba(247,1,120,1)0%,
+                                                rgba(160,8,156,1)51%,
+                                                rgba(99,13,178,1)100%);
+    --main-color:#e6006d;
+    --font-color:#90979f;
+    --hover-box-shadow:rgba(0,0,0,0.19)0px 10px 20px,
+                       rgba(0,0,0,0.23)0px 6px 6px;     
+    --gradient-white-bg2:linear-gradient(98deg,#e5eef7 0%,#fff 100%);
+}
+
+.navbar{
+    padding: 10px ;
+    z-index: 2000;
+    background: var(--gradient-white-bg2);
+    transition: padding 0.7s;
+    border-bottom: 1px solid #90979f;
+}
+
+.navbar-brand {
+    font-size: 1.4rem;
+    font-weight: 700;
+}
+ span{
+    background: var(--gradient-color-bg);
+    -webkit-background-clip: text;
+    color: transparent;
+}
+ul  {
+    transition: all .5s;
+}
+ul li a:hover{
+    background: var(--gradient-color-bg);
+    color: white;
+    border-radius: 6px;
+}
+ul li a{
+    font-weight: 700;
+    font-size: 1.1rem;
+    margin-right: 20px;
+}
+ul li a i {
+    font-size: 15px;
+}
+
+.nav-link{
+    transition: none;
+    -webkit-transition: none;
+    -moz-transition: none;
+    -ms-transition: none;
+    -o-transition: none;
+    color: black;
+}
+
+.navbar-toggler-icon {
+    --bs-navbar-toggler-icon-bg: none;
+}
+.navbar-toggler:focus{
+    box-shadow: none;
+}
+.change{
+    background: var(--gradient-color-bg);
+    color: #fff;
+    border-radius: 6px;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    -ms-border-radius: 6px;
+    -o-border-radius: 6px;
+}
+.navbar {
+    --bs-navbar-toggler-border-color: none;
+}

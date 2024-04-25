@@ -1,0 +1,42 @@
+<nav class="navbar  navbar-expand-lg fixed-top " #navbar>
+  <div class="container-fluid">
+    <a class="navbar-brand" [routerLink]="['/home']"><span>M</span>Kamal</a>
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"
+        ><i class="fa-solid fa-bars-staggered fa-1x"></i
+      ></span>
+    </button>
+    <div #navbarCollapse class="collapse navbar-collapse" id="navbarSupportedContent" 
+    >
+      <ul
+        class="navbar-nav text-center mb-2 mb-lg-0 mx-auto me-2"
+      >
+        <li class="nav-item" (click)="closeNavBar()">
+          <a class="nav-link " role="button" aria-current="page" [routerLink]="['/home']" routerLinkActive="change" ><i class="fa-solid fa-house"></i> Home</a>
+        </li>
+        <li class="nav-item" (click)="closeNavBar()">
+          <a class="nav-link" role="button" [routerLink]="['/about']" routerLinkActive="change"><i class="fa-solid fa-user-tie"></i> About</a>
+        </li>
+        <li class="nav-item"  (click)="closeNavBar()">
+          <a class="nav-link" role="button" [routerLink]="['/skills']" routerLinkActive="change" ><i class="fa-solid fa-gears"></i> Skills</a>
+        </li>
+        <li class="nav-item" (click)="closeNavBar()">
+          <a class="nav-link" role="button" [routerLink]="['/projects']" routerLinkActive="change"><i class="fa-solid fa-cubes"></i> Projects</a>
+        </li>
+        <li class="nav-item" (click)="closeNavBar()">
+          <a class="nav-link" role="button" [routerLink]="['/contact']" routerLinkActive="change"><i class="fa-solid fa-link"></i> Contact</a>
+        </li>
+
+      </ul>
+    </div>
+
+  </div>
+</nav>

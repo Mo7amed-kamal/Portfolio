@@ -1,0 +1,208 @@
+:root{
+    --bg-color:#e3edf7;
+    --gradient-white-bg:linear-gradient(0deg,#fff 0%,#edf4fa 51%,#e5eef7 100%);
+    --gradient-color-bg:linear-gradient(180deg,rgba(247,1,120,1)0%,
+                                                rgba(160,8,156,1)51%,
+                                                rgba(99,13,178,1)100%);
+    --main-color:#e6006d;
+    --font-color:#90979f;
+    --hover-box-shadow:rgba(0,0,0,0.19)0px 10px 20px,
+                       rgba(0,0,0,0.23)0px 6px 6px;     
+    --gradient-white-bg2:linear-gradient(98deg,#e5eef7 0%,#fff 100%);
+    --tw-border-opacity: 1;
+}
+.about{
+    background-color: #e3edf7;
+    padding-top: 100px;
+}
+
+.main-title {
+    margin: 0 auto 30px;
+    border: 2px solid black;
+    width: fit-content;
+    padding: 8px 20px;
+    font-size: 30px;
+    text-transform: uppercase;
+    position: relative;
+    z-index: 1;
+    transition: 0.3s;
+    cursor: pointer;
+}
+.main-title::before,
+.main-title::after {
+    content: "";
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    position: absolute;
+    background-color: var(--main-color);
+    top: 50%;
+    transform: translateY(-50%);
+}
+.main-title::before{
+    left: -30px;
+}
+.main-title::after {
+    right: -30px;
+}
+.main-title:hover::before {
+    z-index: -1;
+    animation: left-move 0.5s linear forwards;
+}
+.main-title:hover::after {
+    z-index: -1;
+    animation: right-move 0.5s linear forwards;
+}
+.main-title:hover {
+    color: white;
+    border: 2px solid white;
+    transition-delay: 0.5s ;
+}
+@media (max-width:700px) {
+    .main-title{
+        font-size: 22px;
+    }
+}
+.info h2 {
+    font-size: clamp(2rem, 5vw, 2.5rem);
+    font-weight: 900;
+}
+.info h2::before {
+    content: '';
+    position: absolute;
+    width: 150px;
+    height: 3px;
+    background-color: #e6006d;
+    top: 32px;
+}
+.info p {
+    font-weight: 400;
+}
+/* ----------------- */
+.line-height{
+    line-height: 1.625;
+}
+.main-color{
+    color: var(--main-color);
+}
+.info p {
+    font-size: 1.125rem;
+
+}
+.img2 {
+    width: 80%;
+}
+.contact h3 {
+    color: var(--main-color);
+    font-weight: bold;
+    font-size: 26px;
+}
+
+.butt {
+    padding: 10px 22px;
+    margin-top: 20px;
+    font-size: 17px;
+}
+
+
+
+/* Media Query */
+@media(max-width:1200px){
+    html{
+        font-size: 95%;
+    }
+}
+@media(max-width:991px){
+    .about .content{
+        display: flex;
+        flex-direction: column;
+    }
+    .about .info p, .about .contact p {
+        line-height: 1.4;
+    }
+    .about .btn-box {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+}
+@media(max-width:530px){
+    html{
+        font-size: 80%;
+    }
+    .info h2 {
+        text-align: center;
+    }
+}
+
+/* &&Animations */
+@keyframes left-move {
+    50% {
+    left: 0;
+    width: 12px;
+    height: 12px;
+    }
+    100% {
+    left: 0;
+    border-radius: 0;
+    width: 50%;
+    height: 100%;
+    }
+}
+@keyframes right-move {
+    50% {
+    right: 0;
+    width: 12px;
+    height: 12px;
+    }
+    100% {
+    right: 0;
+    border-radius: 0;
+    width: 50%;
+    height: 100%;
+    }
+}
+/* ---------Service----------- */
+.service {
+    padding-top: 70px;
+    padding-bottom: 70px;
+    background-color: white;
+}
+.mat-mdc-card{
+    --mdc-elevated-card-container-shape: 7px;
+}
+
+.card{
+    transition: 0.3s;
+    cursor: pointer;
+}
+.card .img-card-last {
+    width: 56%;
+}
+
+.card:hover {
+    box-shadow: var(--hover-box-shadow);
+}
+.one-card:hover {
+    transform: scale(1.05) rotate(-3deg) translateZ(0px);
+}
+
+.two-card:hover {
+    transform: scale(1.05) rotate(3deg) translateZ(0px);
+}
+.mat-mdc-progress-bar{
+    --mdc-linear-progress-active-indicator-color: var(--main-color) ;
+    --mdc-linear-progress-track-color: rgb(255 64 129 / 30%);
+}
+.service .title h2::before {
+    content: '';
+    position: absolute;
+    width: 120px;
+    height: 4px;
+    background-color: #e6006d;
+    top: 35px;
+}
+.c-grey {
+    color: #90979f;
+}

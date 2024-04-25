@@ -1,0 +1,78 @@
+
+:root{
+    --bg-color:#e3edf7;
+    --gradient-white-bg:linear-gradient(0deg,#fff 0%,#edf4fa 51%,#e5eef7 100%);
+    --gradient-color-bg:linear-gradient(180deg,rgba(247,1,120,1)0%,
+                                                rgba(160,8,156,1)51%,
+                                                rgba(99,13,178,1)100%);
+    --main-color:#e6006d;
+    --font-color:#90979f;
+    --hover-box-shadow:rgba(0,0,0,0.19)0px 10px 20px,
+                       rgba(0,0,0,0.23)0px 6px 6px;     
+    --gradient-white-bg2:linear-gradient(98deg,#e5eef7 0%,#fff 100%);
+}
+
+.line{
+    width: 80px;
+    height: 4px;
+    background: var(--main-color);
+}
+.info h2{
+    font-size: 40px;
+    color: #2c3e50;
+}
+@media screen and (max-width:800px) {
+    .info h2{
+        font-size: 25px;
+    }
+}
+.color{
+    color: #2c3e50;
+}
+.cursor-pointer{
+    cursor: pointer;
+}
+.portfolio-item figure{
+    width:100%;
+}
+.portfolio-item {
+    transition: all .5s;
+}
+.portfolio-item:hover {
+    box-shadow: var(--hover-box-shadow);
+}
+.portfolio-item img {
+    border-radius: 8px;
+}
+.portfolio-item .layer{
+    position: absolute;
+    top: 0;
+    left: 15px;
+    right: 15px;
+    bottom: 110%;
+    opacity: 0;
+    transition: 1s;
+}
+.portfolio-item .layer{
+    background-color: rgb(230 0 109 / 65%);
+}
+.portfolio-item:hover .layer{
+    bottom: 15px;
+    opacity: 1;
+}
+
+.portfolio-item figcaption i {
+    font-size: 70px;
+    color: white;
+}
+.modal-content {
+    background-color: transparent;
+    border: none;
+}
+.modal-header {
+    border-bottom: none;
+}
+.btn-close {
+    --bs-btn-close-bg: none;
+    --bs-btn-close-opacity:1;
+}

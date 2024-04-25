@@ -1,0 +1,16 @@
+
+
+.notfound{
+    background-color: aliceblue;
+}
+.info h2 {
+    font-size: clamp(2rem, 5vw, 2.5rem);
+    font-weight: 900;
+}
+.info button {
+    border: none;
+    font-size: 20px;
+}
+.info .butt {
+    padding: 12px 20px;
+}
